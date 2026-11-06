@@ -1,6 +1,6 @@
 # Ariadne
 
-面向2026年 TI 杯赛区赛 E 题《拼图装置》的 monorepo。目前包含资料与项目级 skills，尚无设备控制程序。
+面向2026年 TI 杯赛区赛 E 题《拼图装置》的 monorepo。包含比赛代码拆分后的四个独立项目及项目级知识 skills。
 
 题目要求用视觉和机械机构把A4纸上半区的碎片搬到下半区拼成矩形，覆盖固定四片、未知白片与扑克牌碎片；写字机式平台是候选实现。
 
@@ -24,10 +24,17 @@
 
 ## Monorepo 约定
 
-已有内容：`.agents/skills`保存技能及专题知识，`docs`保存来源索引。未来按实际需要建立 `apps`（应用）、`firmware`（固件）、`hardware`（硬件）、`packages`（共享代码）。目前不预建空项目，不指定技术栈。
+项目入口：
+
+- [求解](packages/solver/README.md)
+- [视觉](packages/vision/README.md)
+- [设备驱动](packages/devices/README.md)
+- [比赛应用](apps/ec26e/README.md)
+
+Python 基线为 3.10；各项目独立 Poetry 环境。统一验证：`python3.10 scripts/check_projects.py`。既有失败仍使检查返回非零，见[迁移记录](docs/migration/ec26e.md)。
 
 资料以中文 Markdown 为主，仅保留必要题图。技能按需读取配套文档；可用技能名称显式请求对应工作。
 
 ## 当前状态
 
-基准为江苏赛区公开题面，核查日期2026-11-06。其他赛区补充规则需另查。所有工程方案均未在本项目设备上验证；Git主分支为`main`。
+基准为江苏赛区公开题面，核查日期2026-11-06。其他赛区补充规则需另查。迁入代码来自比赛版本；本次迁移尚未进行板端验收。Git主分支为`main`。

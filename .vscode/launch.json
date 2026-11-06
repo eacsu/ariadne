@@ -1,0 +1,17 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "EC26E help",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "ec_26_e",
+      "args": [
+        "--help"
+      ],
+      "cwd": "${workspaceFolder}/apps/ec26e",
+      "python": "${workspaceFolder}/apps/ec26e/.venv/bin/python",
+      "envFile": "${workspaceFolder}/apps/ec26e/.env"
+    }
+  ]
+}

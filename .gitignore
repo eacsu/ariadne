@@ -1,3 +1,5 @@
+tmp-workspace/
+
 # Local environments and generated files
 .env
 .env.*

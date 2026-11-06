@@ -15,3 +15,7 @@
 ---
 
 证据索引：[S1—S10](../../../../docs/sources.md)。除明确标为官方要求或接口行为的部分，其余为工程建议；尚未实机验证。
+
+## Ariadne 已迁入的比赛代码
+
+当前实现见 `apps/ec26e` 和 `packages/{solver,vision,devices}`。实际使用 A733 VIPLite、Servo42C、F32C；上面的树莓派/GRBL 属于外部参考，不是当前驱动。迁移以源提交16094397734adcd477a57cba47a33db237872750为基线，Python3.10验证结果见根目录 `docs/migration/ec26e.md`。
